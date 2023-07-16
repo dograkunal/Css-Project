@@ -1,0 +1,235 @@
+/*
+------ Typography System -------
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+
+FONT WEIGHT
+
+Default:400
+Medium:500
+Semi Bold: 600
+Bold: 700
+
+LINE HEIGHT
+Default: 1
+Small: 1.05
+Paragraph: 1.6
+
+COLORS:
+MAIN COLOR: #087f5b
+GREY COLOR: #343a40
+Brand color: #e67e22
+
+TINTS: 
+#fdf2e9
+#fae5d3
+#eb984e
+SHADES:
+#cf711e
+#45260a
+ACCENTS:
+GREYS: #555 #333
+
+
+----SHADOWS-----
+
+
+
+-----BORDER RADIUS-----
+9px
+
+----WHITE SPACE-----
+
+letter-spacing: -0.5px 0.75px
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+*/
+
+/********************G E N E R A L  S E C T I O N*********************/
+
+*:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.8rem hsla(28, 80%, 52%, 0.5);
+}
+
+.btn {
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    padding: 1.6rem 3.2rem;
+    transition: all 300ms;
+    font-weight: 600;
+  }
+  font-size: 2rem;
+  border-radius: 9px;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btnFull {
+  &:link,
+  &:visited {
+    background-color: #e67e22;
+    color: #fff !important;
+  }
+  &:hover,
+  &:active {
+    background-color: #cf711f;
+  }
+}
+
+.btnOutline {
+  &:link,
+  &:visited {
+    background-color: #fff;
+    color: #555 !important;
+  }
+  &:hover,
+  &:active {
+    background-color: #fdf2e9;
+    box-shadow: inset 0 0 0 3px #fff;
+  }
+}
+
+.btnForm {
+  background-color: #45260a;
+  color: #fdf2e9;
+  align-self: flex-end;
+  padding: 1.2rem;
+
+  &:hover {
+    background-color: #fff;
+    color: #333;
+  }
+}
+
+.marginRgtSm {
+  margin-right: 1.6rem !important;
+}
+
+.marginBtmMd {
+  margin-bottom: 4.8rem !important;
+}
+
+.gridClass {
+  display: grid;
+  row-gap: 9.6rem;
+  column-gap: 6.4rem;
+}
+.gridClass:not(:last-child) {
+  margin-bottom: 9.6rem;
+}
+
+.gridMrBtm {
+  margin-bottom: 9.6rem;
+}
+
+.gridCol_2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+.gridCol_3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+.gridCol_4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+.gridCol_5 {
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.gridVrCentre {
+  align-items: center;
+}
+
+.container {
+  /* 1140px*/
+  max-width: 120rem;
+  padding: 0 3.2rem;
+  margin: 0 auto;
+}
+
+.headingPrimary {
+  font-size: 5.2rem;
+  line-height: 1.05;
+  margin-bottom: 3.2rem;
+}
+
+.headingSecondary {
+  font-size: 4.4rem;
+  line-height: 1.2;
+  margin-bottom: 9.6rem;
+}
+
+.headingTertiary {
+  font-size: 3rem;
+  line-height: 1.2;
+  margin-bottom: 3.2rem;
+}
+
+.subHeading {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #cf711f;
+  text-transform: uppercase;
+  margin-bottom: 1.6rem;
+  letter-spacing: 0.75px;
+}
+
+.headingPrimary,
+.headingSecondary {
+  letter-spacing: -0.5px;
+  font-weight: 700;
+  color: #333;
+}
+
+.cta .headingSecondary {
+  color: #45260a;
+  margin-bottom: 3.2rem;
+}
+
+strong {
+  font-weight: 500;
+}
+
+.linkCls {
+  &:link,
+  &:visited {
+    display: inline-block;
+    color: #e67e22;
+    text-decoration: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    transition: all 0.3s;
+  }
+  &:hover,
+  &:active {
+    color: #cf711f;
+    border-bottom: 1px solid transparent;
+  }
+}
+
+.textAlnCntr {
+  text-align: center;
+}
+
+.listHead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  list-style: none;
+}
+.listItems {
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+  font-size: 1.8rem;
+}
+.iconStyle {
+  width: 3rem;
+  height: 3rem;
+  color: #e67e22;
+}
