@@ -35,6 +35,7 @@ import Gallery11 from "../assets/img/gallery/gallery-11.jpg";
 import Gallery12 from "../assets/img/gallery/gallery-12.jpg";
 import "./mainStyle.scss";
 import "./general.scss";
+import "./mediaQuery.scss";
 
 function LandingPage() {
   return (
