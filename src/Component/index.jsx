@@ -17,6 +17,22 @@ import Logo4 from "../assets/img/logos/usa-today.png";
 import Logo5 from "../assets/img/logos/the-new-york-times.png";
 import meal1 from "../assets/img/meals/meal-1.jpg";
 import meal2 from "../assets/img/meals/meal-2.jpg";
+import Dave from "../assets/customers/dave.jpg";
+import Hannah from "../assets/customers/hannah.jpg";
+import Steve from "../assets/customers/steve.jpg";
+import Ben from "../assets/customers/ben.jpg";
+import Gallery1 from "../assets/img/gallery/gallery-1.jpg";
+import Gallery2 from "../assets/img/gallery/gallery-2.jpg";
+import Gallery3 from "../assets/img/gallery/gallery-3.jpg";
+import Gallery4 from "../assets/img/gallery/gallery-4.jpg";
+import Gallery5 from "../assets/img/gallery/gallery-5.jpg";
+import Gallery6 from "../assets/img/gallery/gallery-6.jpg";
+import Gallery7 from "../assets/img/gallery/gallery-7.jpg";
+import Gallery8 from "../assets/img/gallery/gallery-8.jpg";
+import Gallery9 from "../assets/img/gallery/gallery-9.jpg";
+import Gallery10 from "../assets/img/gallery/gallery-10.jpg";
+import Gallery11 from "../assets/img/gallery/gallery-11.jpg";
+import Gallery12 from "../assets/img/gallery/gallery-12.jpg";
 import "./mainStyle.scss";
 import "./general.scss";
 
@@ -315,6 +331,88 @@ function LandingPage() {
             <a href="#" className="linkCls">
               see all recipes &rarr;
             </a>
+          </div>
+        </section>
+
+        <section className="sectionTestimonials ">
+          <div className="testContainer">
+            <span className="subHeading">Testimonials</span>
+            <h2 className="headingSecondary">Try once, You can't go back !</h2>
+
+            <div className="testimonials">
+              <figure className="testimonial">
+                <img src={Dave} alt="dave" className="testimonialImage" />
+                <blockquote className="testimonialText">
+                  Inexpensive, healthy and great-tasting meals, without even
+                  having to order manually! It feels truly magical.
+                </blockquote>
+                <p className="testimonialName"> &mdash; Dave Bryson</p>
+              </figure>
+              <figure className="testimonial">
+                <img src={Ben} alt="Ben" className="testimonialImage" />
+                <blockquote className="testimonialText">
+                  The AI algorithm is crazy good, it chooses the right meals for
+                  me every time. It's amazing not to worry about food anymore!
+                </blockquote>
+                <p className="testimonialName"> &mdash; Ben Hadley</p>
+              </figure>
+              <figure className="testimonial">
+                <img src={Hannah} alt="hannah" className="testimonialImage" />
+                <blockquote className="testimonialText">
+                  I got Omnifood for the whole family, and it frees up so much
+                  time! Plus, everything is organic and vegan and without
+                  plastic.
+                </blockquote>
+                <p className="testimonialName"> &mdash; Hannah Smith</p>
+              </figure>
+              <figure className="testimonial">
+                <img src={Steve} alt="Steve" className="testimonialImage" />
+                <blockquote className="testimonialText">
+                  Omnifood is a life saver! I just started a company, so there's
+                  no time for cooking. I couldn't live without my daily meals
+                  now!
+                </blockquote>
+                <p className="testimonialName"> &mdash; Steve Miller</p>
+              </figure>
+            </div>
+          </div>
+          <div className="testGallery">
+            <figure className="galleryItem">
+              <img src={Gallery1} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery2} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery3} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery4} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery5} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery6} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery7} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery8} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery9} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery10} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery11} alt="Photos of Food" />
+            </figure>
+            <figure className="galleryItem">
+              <img src={Gallery12} alt="Photos of Food" />
+            </figure>
           </div>
         </section>
 
