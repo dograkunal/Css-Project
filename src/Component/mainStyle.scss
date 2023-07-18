@@ -1,24 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-html {
-  // font-size: 10px;
-  // 10px/16px == 0.62px === 62.5% -----Presentage of users browset font size setting-----
-  font-size: 62.5%;
-  overflow-x: hidden;
-}
-
-body {
-  font-family: "Rubik", sans-serif;
-  line-height: 1;
-  font-weight: 400;
-  color: #555;
-  overflow-x: hidden;
-}
-
 /********************H E A D E R  S E C T I O N*********************/
 
 .header {
@@ -92,6 +71,25 @@ body {
   .iconmobileNav[name="close-outline"] {
     display: none;
   }
+}
+
+/********************S T I C K Y   N A V   S E C T I O N*********************/
+
+.sticky {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+  height: 8rem;
+  padding-top: 0;
+  padding-bottom: 0;
+  background-color: rgba(255, 255, 255, 0.97);
+  box-shadow: 0, 1.2rem, 3.2rem rgba(0, 0, 0, 0.03);
+  z-index: 99;
+}
+
+.sectionHeroMargin {
+  margin-top: 9.6rem;
 }
 
 /********************M A I N  S E C T I O N*********************/

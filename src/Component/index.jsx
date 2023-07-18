@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Logo from "../assets/img/omnifood-logo.png";
 import heroImg from "../assets/img/hero.png";
 import customer1 from "../assets/customers/customer1.jpg";
@@ -39,53 +39,95 @@ import "./mediaQuery.scss";
 
 function LandingPage() {
   const [toggle, setToggle] = useState(false);
+  const [scrollClass, setScrollClass] = useState();
+
+  function handleToggle() {
+    setToggle(!toggle);
+  }
+
+  const handleScroll = () => {
+    const scrollPos = window.scrollY;
+    if (scrollPos > 650) {
+      setScrollClass("sticky");
+    } else {
+      setScrollClass(" ");
+    }
+  };
+
+  /* addEventListener(type, listener(A callback) , options) */
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  /* need to read about it */
+  // const sectionHeroEl = document.querySelector(".sectionHero");
+  // const Newobserver = new IntersectionObserver(
+  //   function (entries) {
+  //     const ent = entries[0];
+  //     console.log(ent);
+  //   },
+  //   {
+  //     root: null,
+  //     threshold: 0,
+  //   }
+  // );
+  // Newobserver.observe(sectionHeroEl);
 
   return (
     <>
-      <header className={toggle ? `header navOpen` : `header`}>
+      <header className={`header ${scrollClass}` + (toggle ? `navOpen` : " ")}>
         <img className="headerLogo" src={Logo} alt="Logo" />
         <nav className="mainNav">
           <ul className="mainNavList">
             <li>
-              <a href="#" className="mainNavLink">
+              <a
+                href="#howWorks"
+                className="mainNavLink"
+                onClick={handleToggle}
+              >
                 How it Works
               </a>
             </li>
             <li>
-              <a href="#" className="mainNavLink">
+              <a href="#meals" className="mainNavLink" onClick={handleToggle}>
                 Meals
               </a>
             </li>
             <li>
-              <a href="#" className="mainNavLink">
+              <a
+                href="#testimonials"
+                className="mainNavLink"
+                onClick={handleToggle}
+              >
                 Testimonials
               </a>
             </li>
             <li>
-              <a href="#" className="mainNavLink">
+              <a href="#pricing" className="mainNavLink" onClick={handleToggle}>
                 Pricing
               </a>
             </li>
             <li>
-              <a href="#" className="mainNavLink navLast">
+              <a
+                href="#cta"
+                className="mainNavLink navLast"
+                onClick={handleToggle}
+              >
                 Try for free
               </a>
             </li>
           </ul>
         </nav>
-        <button
-          className="mobileNavBtn"
-          onClick={() => {
-            setToggle(!toggle);
-          }}
-        >
+        <button className="mobileNavBtn" onClick={handleToggle}>
           <ion-icon name="menu-outline" class="iconmobileNav"></ion-icon>
           <ion-icon name="close-outline" class="iconmobileNav"></ion-icon>
         </button>
       </header>
 
       <main>
-        <section className="sectionHero">
+        <section className={"sectionHero"}>
           <div className="hero">
             <div className="heroTextBox">
               <h1 className="headingPrimary">
@@ -96,10 +138,10 @@ function LandingPage() {
                 eat healthy again. Tailored to your personal tastes and
                 nutritional needs.
               </p>
-              <a href="#" className="btn btnFull marginRgtSm">
+              <a href="#cta" className="btn btnFull marginRgtSm">
                 Eating Clean
               </a>
-              <a href="#" className="btn btnOutline">
+              <a href="#howWorks" className="btn btnOutline">
                 Learn More &darr;
               </a>
               <div className="deliveredMeals">
@@ -139,7 +181,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="sectionWorks ">
+        <section className="sectionWorks " id="howWorks">
           <div className="container">
             <span className="subHeading">How it works</span>
             <h2 className="headingSecondary">
@@ -209,7 +251,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="sectionMeals">
+        <section className="sectionMeals" id="meals">
           <div className="container textAlnCntr">
             <span className="subHeading">Meals</span>
             <h2 className="headingSecondary">
@@ -346,7 +388,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="sectionTestimonials ">
+        <section className="sectionTestimonials" id="testimonials">
           <div className="testContainer">
             <span className="subHeading">Testimonials</span>
             <h2 className="headingSecondary">Try once, You can't go back !</h2>
@@ -428,7 +470,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="sectionPricing">
+        <section className="sectionPricing" id="pricing">
           <div className="container">
             <span className="subHeading">Pricing</span>
             <h2 className="headingSecondary">
@@ -574,7 +616,7 @@ function LandingPage() {
           </div>
         </section>
 
-        <section className="sectionCta gridMrBtm">
+        <section className="sectionCta gridMrBtm" id="cta">
           <div className="container">
             <div className="cta">
               <div className="ctaTextbox">
