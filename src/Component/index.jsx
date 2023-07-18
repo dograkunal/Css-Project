@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Logo from "../assets/img/omnifood-logo.png";
 import heroImg from "../assets/img/hero.png";
 import customer1 from "../assets/customers/customer1.jpg";
@@ -38,9 +38,11 @@ import "./general.scss";
 import "./mediaQuery.scss";
 
 function LandingPage() {
+  const [toggle, setToggle] = useState(false);
+
   return (
     <>
-      <header className="header">
+      <header className={toggle ? `header navOpen` : `header`}>
         <img className="headerLogo" src={Logo} alt="Logo" />
         <nav className="mainNav">
           <ul className="mainNavList">
@@ -71,6 +73,15 @@ function LandingPage() {
             </li>
           </ul>
         </nav>
+        <button
+          className="mobileNavBtn"
+          onClick={() => {
+            setToggle(!toggle);
+          }}
+        >
+          <ion-icon name="menu-outline" class="iconmobileNav"></ion-icon>
+          <ion-icon name="close-outline" class="iconmobileNav"></ion-icon>
+        </button>
       </header>
 
       <main>
@@ -577,7 +588,7 @@ function LandingPage() {
                 </p>
                 <form className="ctaForm" action="#">
                   <div>
-                    <label for="fullName">Full Name</label>
+                    <label htmlFor="fullName">Full Name</label>
                     <input
                       id="fullName"
                       type="text"
@@ -586,7 +597,7 @@ function LandingPage() {
                     />
                   </div>
                   <div>
-                    <label for="eMail">Email address</label>
+                    <label htmlFor="eMail">Email address</label>
                     <input
                       id="eMail"
                       type="email"
@@ -595,7 +606,7 @@ function LandingPage() {
                     />
                   </div>
                   <div>
-                    <label for="selectWhere">
+                    <label htmlFor="selectWhere">
                       Where did you hear about us?
                     </label>
                     <select id="selectWhere" required>

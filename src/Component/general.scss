@@ -14,6 +14,7 @@ LINE HEIGHT
 Default: 1
 Small: 1.05
 Paragraph: 1.6
+Large: 1.8
 
 COLORS:
 MAIN COLOR: #087f5b
@@ -40,7 +41,10 @@ GREYS: #555 #333
 
 ----WHITE SPACE-----
 
-letter-spacing: -0.5px 0.75px
+letter-spacing: 
+-0.5px 
+0.75px
+
 SPACING SYSTEM (px)
 2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
 
@@ -226,6 +230,7 @@ strong {
   display: flex;
   align-items: center;
   gap: 1.6rem;
+  line-height: 1.2;
   font-size: 1.8rem;
 }
 .iconStyle {

@@ -3,6 +3,10 @@
 **********BREAK POINTS**********
 1344px -- Small Computer/Laptop
 1200px -- Tablets Landscape
+940px -- Tablets Potrait
+704px -- smaller Tablets
+550px -- Mobile phones
+
 
 */
 
@@ -62,6 +66,250 @@
   .sectionTestimonials {
     .testContainer {
       padding: 9.6rem 3.2rem;
+    }
+  }
+}
+
+/* *****940px size***** */
+
+@media screen and (max-width: 59em) {
+  html {
+    /* 8px/16px = 0.5 = 50% */
+    font-size: 50%;
+  }
+
+  .sectionHero {
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 0 8rem;
+      gap: 6.4rem;
+
+      .heroTextBox {
+        text-align: center;
+        .deliveredMeals {
+          justify-content: center;
+          margin-top: 3.2rem;
+        }
+      }
+      .heroImageBox {
+        text-align: center;
+        .heroImage {
+          width: 60%;
+        }
+      }
+    }
+  }
+
+  .sectionFeatured {
+    .logosFeatured {
+      img {
+        height: 2.6rem;
+      }
+    }
+  }
+
+  .sectionWorks {
+    .stepTextBox {
+      .stepNumber {
+        font-size: 7.4rem;
+      }
+    }
+  }
+
+  .sectionMeals {
+    .mealCard {
+      .mealContent {
+        padding: 2.4rem 3.2rem 3.2rem 3.2rem;
+      }
+    }
+  }
+
+  .sectionTestimonials {
+    grid-template-columns: 1fr;
+    .testGallery {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+
+  .sectionCta {
+    .cta {
+      grid-template-columns: 3fr 2fr;
+      .ctaForm {
+        grid-template-columns: 1fr;
+      }
+    }
+  }
+
+  .btnForm {
+    margin-top: 1.2rem;
+  }
+
+  .headingSecondary {
+    font-size: 3.2rem;
+  }
+
+  /* *****Mobile Navigation***** */
+  .mobileNavBtn {
+    display: block;
+  }
+
+  .header {
+    .mainNav {
+      display: flex;
+      background-color: rgba(245, 243, 230, 0.938);
+      /* Position to header */
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      justify-content: center;
+
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease-in;
+      align-items: center;
+      pointer-events: none;
+      visibility: hidden;
+      .mainNavList {
+        flex-direction: column;
+        gap: 4.8rem;
+        .mainNavLink {
+          &:link,
+          &:visited {
+            font-size: 3rem;
+          }
+        }
+      }
+    }
+  }
+  .navOpen .mainNav {
+    opacity: 1;
+
+    pointer-events: auto;
+    visibility: visible;
+    transform: translateX(0);
+  }
+
+  .navOpen .iconmobileNav[name="close-outline"] {
+    display: block;
+  }
+  .navOpen .iconmobileNav[name="menu-outline"] {
+    display: none;
+  }
+}
+
+/* *****704px size***** */
+@media screen and (max-width: 44em) {
+  .gridCol_3,
+  .gridCol_4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sectionMeals {
+    .mealDiets {
+      grid-column: 1/-1;
+      justify-self: center;
+    }
+  }
+
+  .headingSecondary {
+    margin-bottom: 4.8rem;
+  }
+  .sectionPricing {
+    .pricingPlans {
+      width: 100%;
+    }
+  }
+
+  .footerMain {
+    .navCol {
+      grid-row: 1;
+      grid-column: span 2;
+      margin-bottom: 3.2rem;
+    }
+    .logoColumn,
+    .addressCol {
+      grid-column: span 3;
+    }
+  }
+
+  .gridFooter {
+    grid-template-columns: repeat(6 1fr);
+  }
+}
+
+/* *****550px size***** */
+@media screen and (max-width: 34em) {
+  .gridCol_2,
+  .gridCol_3,
+  .gridCol_4 {
+    grid-template-columns: 1fr;
+  }
+
+  .gridClass {
+    row-gap: 4.2rem;
+  }
+
+  .sectionHero {
+    padding: 2.4rem 0 6.4rem 0;
+    .hero {
+      padding: 0 3.2rem;
+    }
+    .heroImage {
+      width: 80%;
+    }
+  }
+
+  .btn {
+    &:link,
+    &:visited {
+      padding: 2.4rem 1.5rem;
+    }
+  }
+
+  .sectionFeatured {
+    .logosFeatured {
+      img {
+        height: 1.2rem;
+      }
+    }
+  }
+
+  .sectionWorks {
+    .stepImageBox {
+      &:nth-child(2) {
+        grid-row: 1;
+      }
+      &:nth-child(6) {
+        grid-row: 5;
+      }
+      transform: translateY(2.4rem);
+    }
+  }
+
+  .sectionTestimonials {
+    .testContainer {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+    .testGallery {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+    }
+  }
+
+  .sectionCta {
+    .cta {
+      grid-template-columns: 1fr;
+      .ctaTextbox {
+        padding: 3.2rem;
+      }
+      .ctaImagebox {
+        height: 35rem;
+        grid-row: 1;
+      }
     }
   }
 }
